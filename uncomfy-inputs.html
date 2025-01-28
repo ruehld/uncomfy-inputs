@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lol</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        select, input[type="text"], input[type="number"], input[type="range"] {
+            width: 250px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-container button {
+            margin: 0 5px;
+        }
+        .feedback {
+            font-size: 20px;
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="question-1" class="question">
+  <h2>Vorname</h2>
+  <select id="firstname">
+    <!-- Options will be filled via JavaScript -->
+  </select>
+</div>
+<div id="question-2" class="question">
+  <h2>Nachname</h2>
+  <select id="lastname">
+    <!-- Options will be filled via JavaScript -->
+  </select>
+</div>
+
+<div id="question-3" class="question">
+  <h2>Handynummer</h2>
+  <input type="range" id="phone-slider" min="1600000000" max="1800000000" step="1">
+  <p id="phone-value">Phone Number: (+49) 1700000000</p>
+  <button onclick="plus(1)">+1</button>
+  <button onclick="plus(2)">+2</button>
+  <button onclick="plus(3)">+3</button>
+  <button onclick="plus(5)">+5</button>
+  <button onclick="plus(8)">+8</button>
+  <button onclick="plus(100)">+100</button>
+  <button onclick="plus(1000)">+1000</button>
+  <button onclick="plus(10000)">+10000</button>
+  <br>
+  <button onclick="plus(-1)">-1</button>
+  <button onclick="plus(-2)">-2</button>
+  <button onclick="plus(-3)">-3</button>
+  <button onclick="plus(-5)">-5</button>
+  <button onclick="plus(-8)">-8</button>
+  <button onclick="plus(-100)">-100</button>
+  <button onclick="plus(-1000)">-1000</button>
+  <button onclick="plus(-10000)">-10000</button>
+</div>
+
+<div id="question-4" class="question">
+  <h2>Geburtsdatum</h2>
+  <p id="birthdate-value">Random Date: 2001-08-15</p>
+  <button onclick="adjustDate('earlier')">Earlier</button>
+  <button onclick="adjustDate('later')">Later</button>
+</div>
+
+<div id="question-5" class="question">
+  <h2>Passwort</h2>
+  <input type="text" id="password-input" placeholder="Enter password" />
+  <div id="password-feedback" class="feedback"></div>
+</div>
+
+<div id="question-6" class="question">
+  <h2>Lieblingszahl</h2>
+  <input type="text" id="favorite-number">
+</div>
+
+<button id="submit-btn">GO!</button>
+
+<div id="video-container">
+  <h2>Congratulations! Here's your reward:</h2>
+  <iframe id="rickroll-video" width="420" height="345" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="" autoplay></iframe>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
